@@ -1,0 +1,73 @@
+html {
+    background-color: rgb(230, 230, 230);
+    scrollbar-color: rgb(186, 214, 231) white;
+    scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+    background-color: white;
+    width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(186, 214, 231);
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #383838;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#title {
+    align-self: center;
+    font-size: 2.5em;
+}
+
+#img-div {
+    width: 80%;
+    align-self: center;
+    padding: 10px;
+    background-color: #efefef;
+}
+
+#image {
+    display: block;
+    padding: 2px;
+    max-width: 100%;
+}
+
+#img-caption {
+    text-align: center;
+    margin-top: 20;
+}
+
+#tribute-info {
+    width: 80%;
+    margin-top: 40px;
+    align-self: center;
+}
+
+#tribute-info h2 {
+    font-size: 1.2em;
+}
+
+#tribute-info li {
+    padding-bottom: 25px;
+}
+
+#tribute-link {
+    color: rgb(26, 26, 26);
+}
+
+#tribute-link:hover {
+    font-weight: 500;
+}
+
+#tribute-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
