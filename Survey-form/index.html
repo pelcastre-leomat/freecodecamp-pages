@@ -10,7 +10,6 @@
 <body>
     <div id="main">
         <div id="survey-tile">
-            <!-- Sacar de tile para que parezca la original -->
             <div id="survey-header">
                 <h1 id="title">
                     LeoTech support survey form
@@ -21,6 +20,7 @@
             </div>
             <div id="survey-content">
                 <form action="" id="survey-form">
+                    <!-- Contact info -->
                     <div id="contact-div">
                         <label for="name" id="name-label">Name:</label>
                         <br>
@@ -37,7 +37,7 @@
                     </div>
 
 
-                    <!-- Dropdown -->
+                    <!-- Model dropdown -->
                     <div id="model-div">
                         <label for="dropdown">iPhone model</label>
                         <br>
@@ -53,21 +53,25 @@
                     </div>
 
 
-                    <!-- Radio -->
+                    <!-- Satisfaction radiobuttons -->
                     <div id="satisfaction-div">
                         <p  id="satisfied-level-label">How satisfied are you with your purchase?</p>
                         <input type="radio" name="satified-level" id="sat-lev1" value="1">
                         <label for="sat-lev1">Very Dissatisfied</label>
                         <br>
+
                         <input type="radio" name="satified-level" id="sat-lev2" value="2">
                         <label for="sat-lev2">Dissatisfied</label>
                         <br>
+
                         <input type="radio" name="satified-level" id="sat-lev3" value="3">
                         <label for="sat-lev3">Neutraly satisfied</label>
                         <br>
+
                         <input type="radio" name="satified-level" id="sat-lev4" value="4">
                         <label for="sat-lev4">Very satisfied</label>
                         <br>
+
                         <input type="radio" name="satified-level" id="sat-lev5" value="5">
                         <label for="sat-lev5">Extremely satisfied</label>
                     </div>
@@ -75,7 +79,7 @@
 
 
 
-                    <!-- Checkboxes -->
+                    <!-- Reasons to have bought checkboxes -->
                     <div id="reasons-div">
                         <p id="buy-reasons-label">Why did you buy an iPhone?</p>
                         <input type="checkbox" class="sized-box" id="reason1" name="reason1" value="visual" placeholder="test">
@@ -103,7 +107,7 @@
                         <br>
                     </div>
 
-                    <!-- Text field -->
+                    <!-- Experience description text field -->
                     <p id="comment-field-label">Describe your experience with your new phone:</p>
                     <textarea name="" id="comment-field" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
                     <br>
@@ -112,12 +116,7 @@
                     <input type="submit" name="submit" id="submit" value="Submit">
                 </form>
             </div>
-
-
         </div>
-        
     </div>
-
-    
 </body>
 </html>
