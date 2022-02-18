@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div id="main">
+        <div id="survey-tile">
+            <!-- Sacar de tile para que parezca la original -->
+            <div id="survey-header">
+                <h1 id="title">
+                    LeoTech support survey form
+                </h1>
+                <p id="description">
+                    Help us provide better service with your feedback!
+                </p>    
+            </div>
+            <div id="survey-content">
+                <form action="" id="survey-form">
+                    <div id="contact-div">
+                        <label for="name" id="name-label">Name:</label>
+                        <br>
+                        <input type="text" id="name" required placeholder="Enter your name">
+                        <br>
+                        <label for="email" id="email-label">Email:</label>
+                        <br>
+                        <input type="email" id="email" required placeholder="Enter your Email">
+                        <br>
+                        <label for="number" id="number-label">Age</label>
+                        <br>
+                        <input type="number" id="number" required min="5" max="120" placeholder="Age">
+                        <br>
+                    </div>
+
+
+                    <!-- Dropdown -->
+                    <div id="model-div">
+                        <label for="dropdown">iPhone model</label>
+                        <br>
+                        <select id="dropdown" name="model">
+                            <option disabled="" selected="" value="">Select an option</option>
+                            <option value="1">iPhone X</option>
+                            <option value="2">iPhone 11 </option>
+                            <option value="3">iPhone 12 Pro</option>
+                            <option value="4">iPhone 13 Pro</option>
+                            <option value="5">iPhone 13 Pro Max</option>
+                        </select>
+                        <br>
+                    </div>
+
+
+                    <!-- Radio -->
+                    <div id="satisfaction-div">
+                        <p  id="satisfied-level-label">How satisfied are you with your purchase?</p>
+                        <input type="radio" name="satified-level" id="sat-lev1" value="1">
+                        <label for="sat-lev1">Very Dissatisfied</label>
+                        <br>
+                        <input type="radio" name="satified-level" id="sat-lev2" value="2">
+                        <label for="sat-lev2">Dissatisfied</label>
+                        <br>
+                        <input type="radio" name="satified-level" id="sat-lev3" value="3">
+                        <label for="sat-lev3">Neutraly satisfied</label>
+                        <br>
+                        <input type="radio" name="satified-level" id="sat-lev4" value="4">
+                        <label for="sat-lev4">Very satisfied</label>
+                        <br>
+                        <input type="radio" name="satified-level" id="sat-lev5" value="5">
+                        <label for="sat-lev5">Extremely satisfied</label>
+                    </div>
+                    
+
+
+
+                    <!-- Checkboxes -->
+                    <div id="reasons-div">
+                        <p id="buy-reasons-label">Why did you buy an iPhone?</p>
+                        <input type="checkbox" class="sized-box" id="reason1" name="reason1" value="visual" placeholder="test">
+                        <label for="reason1">Beautiful design</label>
+                        <br>
+
+                        <input type="checkbox" class="sized-box" id="reason2" name="reason2" value="ux">
+                        <label for="reason2">Great user experience</label>
+                        <br>
+    
+                        <input type="checkbox" class="sized-box" id="reason3" name="reason3" value="photo">
+                        <label for="reason3">Photography</label>
+                        <br>
+    
+                        <input type="checkbox" class="sized-box" id="reason4" name="reason4" value="updates">
+                        <label for="reason4">Long lived update cycle</label>
+                        <br>
+    
+                        <input type="checkbox" class="sized-box" id="reason5" name="reason5" value="rich">
+                        <label for="reason5">For showing off</label>
+                        <br>
+    
+                        <input type="checkbox" class="sized-box" id="reason6" name="reason6" value="friends">
+                        <label for="reason6">All my friends have one</label>
+                        <br>
+                    </div>
+
+                    <!-- Text field -->
+                    <p id="comment-field-label">Describe your experience with your new phone:</p>
+                    <textarea name="" id="comment-field" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+                    <br>
+                    
+                    <!-- Submit button -->
+                    <input type="submit" name="submit" id="submit" value="Submit">
+                </form>
+            </div>
+
+
+        </div>
+        
+    </div>
+
+    
+</body>
+</html>
