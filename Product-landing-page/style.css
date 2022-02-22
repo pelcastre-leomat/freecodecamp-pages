@@ -1,33 +1,63 @@
 /* Should have flex box once */
 /* Once media query */
 /* #c2b7a2, #2e2c2a, #cfddd8*/
+:root {
+    --header-color: white;
+    --main-content-color: white;
+    --footer-color: #c2b7a2;
+}
 
 html,body{
     height: 100%;
+    font-size: 11px;
 }
 
 body {
     margin: 0px;
 }
 
-.item1 {
-    background: LightSkyBlue;
+.header {
+    display: flex;
+    width: 100%;
+    background: var(--header-color);
     grid-area: header;
+    flex-direction: row;
+    box-sizing: border-box;
 }
 
-.item2 {
-    background: LightSalmon;
-    grid-area: advert;
+#header-img {
+    height: 100%;
+    display: flex;
+    align-content: center;
 }
 
-.item3 {
-    background: PaleTurquoise;
+#nav-bar {
+    width: 100%;
+    margin-right: 5px;
+}
+
+#nav-bar a {
+    float: right;
+    padding-left:5px;
+}
+
+/* Maybe add grid system to control flow of content */
+.main-container {
+    background: var(--main-content-color);
     grid-area: content;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
-.item4 {
-    background: lightpink;
-    grid-area: footer;
+/* Non fixed bar */
+#footer-content {
+    display: flex;
+    width: 100%;
+    background: var(--footer-color);
+    /* grid-area: footer; */
 }
 
 .container {
@@ -38,23 +68,24 @@ body {
     background: LightGray;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px auto 50px;
+    grid-template-rows: 150px auto;
+    /* grid-template-rows: 150px auto 50px; */
     grid-template-areas:
         "header"
         "content"
-        "footer";
+        /* "footer"; */
 }
 
-/* What do I use this for?
-@media (min-width: 800px){
+@media (min-width: 400px){
     .container{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50px auto 50px;
+        /* grid-template-rows: 50px auto 50px; */
+        grid-template-rows: 50px auto;
         grid-template-areas:
         /* Only change code below this line */
         "header header"
         "content content"
-        "footer footer";
+        /* "footer footer"; */
         /* Only change code above this line */
     }
-} */
+}

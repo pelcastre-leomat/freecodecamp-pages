@@ -9,10 +9,32 @@
 </head>
 <body>
     <div class="container">
-
-        <div class="item1">header</div>
-        <div class="item3">content</div>
-        <div class="item4">footer</div>
+        <header class="header" id="header">
+            <img src="resources/Sandless.svg" alt="Company logo" id="header-img">
+            <nav id="nav-bar">
+                <a href="#" class="nav-link">test</a>
+                <a href="#" class="nav-link">test</a>
+                <a href="#" class="nav-link">test</a>
+            </nav>
+        </header>
+        <div class="main-container" id="main-container">
+        
+            <div>
+                <!-- Video by cottonbro from Pexels -->
+                <iframe id="video" src="https://player.vimeo.com/video/680103086?autoplay=1&loop=1&title=0&byline=0&portrait=0&quality=2K" width="640" height="338" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>   
+            </div>
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <label for="email"></label>
+                <input name="email" type="email" id="email" placeholder="Enter your email address">
+                <!-- Should submit to static link -->
+                <input type="submit" id="submit" value="Submit">
+            </form>
+            <div id="footer-content">
+                <p>
+                    &copy; Leonardo Matias Pelcastre 2022
+                </p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
