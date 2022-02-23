@@ -4,36 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Sandy</title>
 </head>
 <body>
-    <!-- Always at top of page -->
-    <header id="header">
-        <img src="#" alt="Company logo" id="header-img">
-        <nav id="nav-bar">
-            <a href="#" class="nav-link"></a>
-            <a href="#" class="nav-link"></a>
-            <a href="#" class="nav-link"></a>
-        </nav>
-    </header>
-
-    
-    <div id="main-container">
-        <div>
-            <!-- Video by cottonbro from Pexels -->
-            <iframe id="video" src="https://player.vimeo.com/video/680103086?autoplay=1&loop=1&title=0&byline=0&portrait=0&quality=2K" width="640" height="338" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>   
+    <div class="container">
+        <header class="header" id="header">
+            <img src="resources/Sandless.svg" alt="Company logo" id="header-img">
+            <nav id="nav-bar">
+                <a href="#" class="nav-link">test</a>
+                <a href="#" class="nav-link">test</a>
+                <a href="#" class="nav-link">test</a>
+            </nav>
+        </header>
+        <div class="main-container" id="main-container">
+            <div class="main-content">
+                <div>
+                    <!-- Video by cottonbro from Pexels -->
+                    <iframe id="video" src="https://player.vimeo.com/video/680103086?autoplay=1&loop=1&title=0&byline=0&portrait=0&quality=2K" width="640" height="338" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>   
+                </div>
+                <form action="https://www.freecodecamp.com/email-submit" id="form">
+                    <label for="email"></label>
+                    <input name="email" type="email" id="email" placeholder="Enter your email address">
+                    <!-- Should submit to static link -->
+                    <input type="submit" id="submit" value="Submit">
+                </form>
+            </div>
+            <div class="footer-content">
+                <p id="footer-txt">
+                    &copy; Leonardo Matias Pelcastre 2022
+                </p>
+            </div>
         </div>
-        <form action="https://www.freecodecamp.com/email-submit" id="form">
-            <label for="email"></label>
-            <input name="email" type="email" id="email" placeholder="Enter your email address">
-            <!-- Should submit to static link -->
-            <input type="submit" id="submit" value="Submit">
-        </form>
-    </div> 
-    
-    
-
-
-    
+    </div>
 </body>
 </html>

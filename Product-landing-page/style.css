@@ -1,91 +1,142 @@
 /* Should have flex box once */
 /* Once media query */
-/* #c2b7a2, #2e2c2a, #cfddd8*/
+/* #c2b7a2, #cfddd8, #2e2c2a*/
 :root {
+    /**/
     --header-color: white;
-    --main-content-color: white;
+    --main-content-color: #cfddd8;
+    
+    /* Footer */
     --footer-color: #c2b7a2;
+    --footer-txt-color: #2e2c2a;
+
 }
 
-html,body{
+* {
+    font-size: 14px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body{
     height: 100%;
-    font-size: 11px;
 }
 
 body {
     margin: 0px;
 }
 
-.header {
-    display: flex;
-    width: 100%;
-    background: var(--header-color);
-    grid-area: header;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-
-#header-img {
-    height: 100%;
-    display: flex;
-    align-content: center;
-}
-
-#nav-bar {
-    width: 100%;
-    margin-right: 5px;
-}
-
-#nav-bar a {
-    float: right;
-    padding-left:5px;
-}
-
-/* Maybe add grid system to control flow of content */
-.main-container {
-    background: var(--main-content-color);
-    grid-area: content;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-}
-
-/* Non fixed bar */
-#footer-content {
-    display: flex;
-    width: 100%;
-    background: var(--footer-color);
-    /* grid-area: footer; */
-}
-
 .container {
-    font-size: 1.5em;
+    overflow: hidden;
     min-height: 300px;
     width: 100%;
     height: 100%;
-    background: LightGray;
+    background: var(--main-content-color);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 150px auto;
-    /* grid-template-rows: 150px auto 50px; */
     grid-template-areas:
         "header"
         "content"
-        /* "footer"; */
 }
 
-@media (min-width: 400px){
+.header {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+        "logo nav-bar"
+}
+
+.header-img-container {
+    grid-area: logo;
+    display: flex;
+    justify-self: center;
+    width: 100%;
+    background-color: var(--header-color);
+    
+}
+
+#header-img {
+    width: 150px;
+}
+
+.nav-bar {
+    grid-area: nav-bar;
+    display: flex;
+    justify-content: end;
+    background-color: var(--header-color);    
+    padding-right: 20px;
+}
+
+.nav-link {
+    align-self: center;
+    padding-left: 20px;
+    font-weight: 600;
+    color: #d1d1d1;
+    text-decoration: none;
+}
+
+.content {
+    overflow: auto;
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 40px;
+    grid-template-areas:
+        "main-content"
+        "footer-content"
+}
+
+.main-content {
+    grid-area: main-content;
+    width: 80vw;
+    justify-self: center;
+}
+
+.main {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    padding: 100px 0px 100px 0px;
+}
+
+#video-div {
+    width: 100%;
+    scroll-margin-top: 20px;
+}
+
+#video {
+    height: 90%;
+    /* Get a mask */
+    border-radius: 60px;
+}
+
+.footer-content {
+    grid-area: footer-content;
+    display: flex;
+    align-self: flex-end;
+    max-height: 40px;
+    height: 100%;
+    background-color: var(--footer-color);
+}
+
+#footer-txt {
+    width: 100%;
+    text-align: center;
+    color: var(--footer-txt-color);
+    font-weight: 600;
+}
+
+@media (min-width: 430px){
     .container{
-        grid-template-columns: 1fr 1fr;
-        /* grid-template-rows: 50px auto 50px; */
-        grid-template-rows: 50px auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px auto;
         grid-template-areas:
-        /* Only change code below this line */
-        "header header"
-        "content content"
-        /* "footer footer"; */
-        /* Only change code above this line */
+        "header"
+        "content"
     }
 }

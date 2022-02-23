@@ -10,31 +10,46 @@
 <body>
     <div class="container">
         <header class="header" id="header">
-            <img src="resources/Sandless.svg" alt="Company logo" id="header-img">
-            <nav id="nav-bar">
-                <a href="#" class="nav-link">test</a>
-                <a href="#" class="nav-link">test</a>
-                <a href="#" class="nav-link">test</a>
+            <div class="header-img-container">
+                <a href="index.html">
+                    <img src="resources/Sandless.svg" alt="Company logo" id="header-img">
+                </a>
+            </div>
+            <nav class="nav-bar" id="nav-bar">
+                <a href="#video-div" id="presentation" class="nav-link">Presentation</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#form" class="nav-link">Waiting list</a>
             </nav>
         </header>
-        <div class="main-container" id="main-container">
-        
-            <div>
-                <!-- Video by cottonbro from Pexels -->
-                <iframe id="video" src="https://player.vimeo.com/video/680103086?autoplay=1&loop=1&title=0&byline=0&portrait=0&quality=2K" width="640" height="338" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>   
+        <div class="content" id="content">
+            <div class="main-content">
+                <div class="main">
+                    <div id="video-div">
+                        <!-- Video by cottonbro from Pexels -->
+                        <!-- Change to locally stored video for github -->
+                        <video id="video" src="resources/duster.mp4" frameborder="0" loop width="100%" autoplay></video>
+                        <!-- <iframe id="video" src="https://player.vimeo.com/video/680103086?autoplay=1&loop=1&title=0&byline=0&portrait=0&quality=2K" width="100%" height="600px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>    -->
+                    </div>
+                    <div id="pricing">
+                        Test Here
+                    </div>
+                    <form action="https://www.freecodecamp.com/email-submit" id="form">
+                        <label for="email"></label>
+                        <input name="email" type="email" id="email" placeholder="Enter your email address">
+                        <!-- Should submit to static link -->
+                        <input type="submit" id="submit" value="Submit">
+                    </form>
+                </div>
             </div>
-            <form action="https://www.freecodecamp.com/email-submit" id="form">
-                <label for="email"></label>
-                <input name="email" type="email" id="email" placeholder="Enter your email address">
-                <!-- Should submit to static link -->
-                <input type="submit" id="submit" value="Submit">
-            </form>
-            <div id="footer-content">
-                <p>
-                    &copy; Leonardo Matias Pelcastre 2022
+            <div class="footer-content">
+                <p id="footer-txt">
+                    &copy; Leonardo 2022
                 </p>
             </div>
         </div>
+
+
     </div>
+    
 </body>
 </html>
