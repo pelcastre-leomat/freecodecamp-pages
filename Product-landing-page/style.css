@@ -3,7 +3,16 @@
 /* #c2b7a2, #cfddd8, #2e2c2a*/
 :root {
     /**/
+    
+    /* All */
+    --general-text-color: #2e2c2a;
+
+
+    /* Header */
     --header-color: white;
+    --nav-link-color: #d1d1d1;
+    
+    /* Main container */
     --main-content-color: #cfddd8;
     
     /* Footer */
@@ -12,8 +21,11 @@
 
 }
 
+/* blur in header 
+drop shadow in header and button*/
 * {
     font-size: 14px;
+    color: var(--general-text-color);
 }
 
 html {
@@ -76,7 +88,7 @@ body {
     align-self: center;
     padding-left: 20px;
     font-weight: 600;
-    color: #d1d1d1;
+    color: var(--nav-link-color);
     text-decoration: none;
 }
 
@@ -112,7 +124,24 @@ body {
 #video {
     height: 90%;
     /* Get a mask */
-    border-radius: 60px;
+    clip-path: inset(0% 5% 0% 5% round 40px);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    border: none;
+    border-bottom: 2px solid rgb(138, 138, 138);
+    background-color: rgba(0, 0, 0, 0);
+    width: 300px;
+}
+
+#submit {
+    display: flex;
 }
 
 .footer-content {
