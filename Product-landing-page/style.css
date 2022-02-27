@@ -127,6 +127,46 @@ body {
     clip-path: inset(0% 5% 0% 5% round 40px);
 }
 
+
+.pricing-tiers {
+    display: grid;
+    width: 700px;
+    height: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+    grid-template-areas:
+        "one two three";
+}
+
+.pricing-tier-container {
+    border: 2px solid var(--footer-color);
+}
+
+.pricing-tier-label {
+    display: flex;
+    background-color: var(--footer-color);
+    color: var(--footer-txt-color);
+    margin: 0px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.pricing-tier-content-container {
+    text-align: center;
+}
+
+.pricing-tier-price {
+    font-weight: 600;
+}
+
+.pricing-tier-content {
+    padding: 0px 10px;
+    text-align: center;
+}
+
 #form {
     display: flex;
     flex-direction: column;
@@ -141,7 +181,14 @@ body {
 }
 
 #submit {
-    display: flex;
+    border: 0px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+    columns: var(--footer-txt-color);
+    background-color: var(--footer-color);
+    padding: 7px 0px;
+    font-weight: 550;
 }
 
 .footer-content {
