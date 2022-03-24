@@ -159,58 +159,40 @@ body {
 }
 
 
-.pricing-tiers {
+.tier-wrapper {
+    border: 2px solid black;
+}
+
+.price-tier-container {
     display: grid;
-    width: 70%;
-    height: 250px;
-    min-width: 450px;
-    max-width: 800px;
-    margin: 50px 0px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    column-gap: 10px;
-    grid-template-areas:
-        "one two three";
+    margin-bottom: 20px;
+    grid-template-columns: 250px;
+    grid-template-rows: 1fr 8fr 1fr;
+    min-height: 200px;
+    grid-template-areas: 
+    "price"
+    "body"
+    "button"
 }
 
-.pricing-tier-container {
-    border: 2px solid var(--footer-color);
+.price-tier-price {
+    grid-area: price;
+    border: 2px solid black;
 }
 
-.pricing-tier-label {
-    display: flex;
-    background-color: var(--footer-color);
-    color: var(--footer-txt-color);
-    margin: -1px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
+.price-tier-body {
+    grid-area: body;
+    border: 2px solid black;
 }
 
-.pricing-tier-content-container {
-    text-align: center;
+.price-tier-button {
+    grid-area: button;
+    border: 2px solid black;
 }
 
-.pricing-tier-price {
-    font-weight: 600;
-}
 
-.pricing-tier-content {
-    padding: 0px 10px;
-    text-align: center;
-}
 
-.buy-button {
-    width: 100%;
-    height: 25px;
-    margin-top: 20px;
-    background-color: var(--buy-button-bg-color);
-    color: var(--buy-button-text-color);
-    font-weight: 500;
-    border: none;
-    align-self: flex-end;
-}
+
 
 #form {
     display: flex;
@@ -291,49 +273,3 @@ body {
         "header"
         "content"
     }
-
-    #pricing {
-        width: 100%;
-    }
-
-    .pricing-tiers {
-        display: grid;
-        width: 100%;
-        height: 15%;
-        margin: 35px 0px;
-        min-width: 100px;
-        row-gap: 15px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-            "one"
-            "two"
-            "three";
-    }
-
-    .pricing-tier-label {
-        font-size: 1.2em;
-    }
-
-
-
-}
-
-/* Media Query for table */
-
-@media (max-width: 600px){
-    .pricing-tiers {
-        display: grid;
-        width: 70%;
-        height: 15%;
-        margin: 35px 0px;
-        min-width: 100px;
-        row-gap: 15px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-            "one"
-            "two"
-            "three";
-    }
-}
