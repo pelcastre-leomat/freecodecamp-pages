@@ -235,7 +235,6 @@ body {
     height: 30px;
     border-radius: 20px;
     margin-bottom: 10px;
-
 }
 
 #form {
@@ -328,3 +327,9 @@ body {
         "content"
     }
 }
+
+/* In media query
+.price-tier-button:hover {
+    width: 122px;
+    height: 32px;
+} */
