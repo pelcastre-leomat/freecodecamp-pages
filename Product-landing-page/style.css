@@ -180,12 +180,13 @@ body {
     width: 100%;
 }
 
-#price-header {
+#price-header h1 {
     font-size: 1.8em;
     text-align: left;
     margin-bottom: 0px;
 }
 
+/* Fix divider not fucking working */
 #price-divider {
     width: 110px;
     margin-bottom: 30px;
