@@ -178,6 +178,7 @@ body {
 
 .tier-wrapper {
     width: 100%;
+    scroll-margin-top: 30px;
 }
 
 #price-header h1 {
@@ -189,16 +190,12 @@ body {
 /* Fix divider not fucking working */
 #price-divider {
     width: 110px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 #price-divider hr {
     border: none;
     border-top: 2px solid var(--footer-txt-color);
-}
-
-#tier-wrapper{
-    scroll-margin-top: 30px;
 }
 
 .price-tier-container {
@@ -209,13 +206,12 @@ body {
     /* max-width: 400px; */
     margin-bottom: 20px;
     font-weight: 600;
-    grid-template-rows: 4fr 3fr;
+    grid-template-rows: 4fr 3.5fr;
     height: 140px;
     grid-template-areas: 
     "body"
     "button"
 }
-
 
 .price-tier-body {
     grid-area: body;
@@ -338,14 +334,33 @@ body {
 
     .tier-wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.7fr;
         margin-top: 150px;
+        width: 100%;
         grid-template-areas: 
-        "tier_header tier_header tier_header"
-        "tier_divider tier_divider tier_divider"
+        "tier_header"
+        "boxes"
+    }
+
+    /* Center Texts? */
+    #tier-boxes-container {
+        display: grid;
+        grid-area: boxes;
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: minmax(200px, 350px) minmax(200px, 350px) minmax(200px, 350px);
+        grid-template-rows: 1fr;
+        grid-gap: 10px;
+        width: 100%;
+        justify-content: center;
+        grid-template-areas: 
         "tier_basic tier_medium tier_premium";
+    }
+
+
+    .price-tier-container {
+        max-width: 350px;
+        height: 200px;
     }
     
     .price_header {
@@ -371,10 +386,8 @@ body {
 
     #form {
         width: 60%;
+        margin-top: 200px;
     }
-
-
-
 }
 
 
