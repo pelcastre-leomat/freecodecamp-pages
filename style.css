@@ -1,12 +1,17 @@
+:root {
+    --bg-color: #ee981f;
+    --btn-color: #ee981f;
+}
+
 body {
-    background-color: #ee981f;
+    background-color: var(--bg-color);
 }
 
 #link-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 6fr 2fr;
+    grid-template-rows: auto auto auto;
     justify-items: center;
     grid-template-areas:
     "header"
@@ -16,16 +21,8 @@ body {
 
 .link-container-header {
     grid-area: header;
-}
-
-.link-container-links {
-    display: flex;
-    grid-area: links;
-    flex-direction: column;
-}
-
-.link-container-footer {
-    grid-area: footer;
+    margin-top: 25px;
+    margin-bottom: 35px;
 }
 
 #profile-container{
@@ -41,13 +38,33 @@ body {
     /* Max width */
 }
 
-#link-container-links {
+#user-handle {
+    margin: 20px 0px 0px 0px;
+    color: white;
+}
+
+.link-container-links {
+    display: flex;
     width: 100%;
+    grid-area: links;
+    flex-direction: column;
+    margin-bottom: 35px;
 }
 
 .profile-link {
-
     margin-bottom: 10px;
-    height: 100px;
+    padding: 20px 25px 20px 25px;
+    height: 80x;
     width: 100%;
+    border: none;
+    color: var(--btn-color);
+}
+
+.link-container-footer {
+    grid-area: footer;
+}
+
+/* Add spacing between icons */
+.social-icons {
+    width: 25px;
 }
