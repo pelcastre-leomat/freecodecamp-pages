@@ -1,6 +1,6 @@
 :root {
-    --bg-color: #ee981f;
-    --btn-color: #ee981f;
+    --bg-color: #ffba5b;
+    --btn-color: #ffba5b;
 }
 
 * {
@@ -39,7 +39,6 @@ body {
 #user-image {
     border-radius: 50%;
     max-width: 120px;
-    /* Max width */
 }
 
 #user-handle {
@@ -50,6 +49,7 @@ body {
 .link-container-links {
     display: flex;
     width: 100%;
+    max-width: 600px;
     grid-area: links;
     flex-direction: column;
     margin-bottom: 25px;
@@ -68,7 +68,6 @@ body {
     grid-area: footer;
 }
 
-/* Add spacing between icons */
 .social-icons {
     width: 25px;
 }
