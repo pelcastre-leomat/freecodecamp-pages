@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Resources/style.css">
+    <link rel="stylesheet" href="fonts.css">
     <title>Website Portfolio</title>
 </head>
 <body>
@@ -12,17 +13,18 @@
         <div id="link-container-header" class="link-container-header">
             <div id="profile-container">
                 <img width="100%" id="user-image" src="Resources/Leonardo.jpg" alt="Image of Leonardo">
-                <p id="user-handle"><b>@leopel</b></p>
+                <p id="user-handle">@leopel</p>
             </div>
         </div>
         <div id="link-container-links" class="link-container-links">
-            <button class="profile-link">Landing Page</button>
-            <button class="profile-link">Survey Form</button>
-            <button class="profile-link">Tribute Page</button>
+            <button class="profile-link" onclick="window.open('Product-landing-page/index.html')">Landing Page</button>
+            <button class="profile-link" onclick="window.open('Survey-form/index.html')">Survey Form</button>
+            <button class="profile-link" onclick="window.open('Tribute-page/index.html')">Tribute Page</button>
         </div>
         <div id="link-container-footer" class="link-container-footer">
-            <img src="Resources/linkedIn.png" alt="" class="social-icons">    
-            <img class="social-icons" src="Resources/twitter.png" alt="twitter">
+            <img src="Resources/linkedIn.png" alt="linkedin page" class="social-icons"  onclick="window.open('https://no.linkedin.com/in/leonardo-matias-pelcastre-44a423227')">
+            <!-- <img class="social-icons" src="Resources/twitter.png" alt="twitter page"> -->
+            <img class="social-icons" src="Resources/youtube.png" alt="youtube page" onclick="window.open('https://www.youtube.com/channel/UCuPryjDk5iUY5CpXEOxnTBQ')">
         </div>
     </div>
 
@@ -30,5 +32,12 @@
     <!-- <a href="Product-landing-page/index.html">Landing Page</a>
     <a href="Survey-form/index.html">Survey Form</a>
     <a href="Tribute-page/index.html">Tribute Page</a> -->
+    <script>
+        var icons = document.getElementsByClassName("social-icons");
+        for (let i = 1; i < icons.length; i++) {
+
+            icons[i].style.marginLeft= "15px";
+        }
+    </script>
 </body>
 </html>

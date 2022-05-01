@@ -3,6 +3,10 @@
     --btn-color: #ee981f;
 }
 
+* {
+    font-family: 'VisbyRounCF-Med';
+}
+
 body {
     background-color: var(--bg-color);
 }
@@ -48,11 +52,11 @@ body {
     width: 100%;
     grid-area: links;
     flex-direction: column;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .profile-link {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 20px 25px 20px 25px;
     height: 80x;
     width: 100%;
