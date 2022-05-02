@@ -1,3 +1,12 @@
+:root {
+    --bg-color: white;
+    --bg-color-navbar: white;
+}
+
+* {
+    font-family: sans-serif;
+}
+
 body {
     width: 100vw;
     margin: 0px;
@@ -5,7 +14,7 @@ body {
 
 #page-wrapper {
     display: grid;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 300px 1fr;
     grid-template-columns: auto;
     grid-template-areas: 
     "navbar"
@@ -14,17 +23,55 @@ body {
 
 #navbar {
     grid-area: navbar;
-    overflow-y: auto;
-    background-color: grey;
+    background-color: var(--bg-color-navbar);
+    overflow-y: hidden;
 }
+
+#navbar-header {
+    padding-top: 10px;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.05em;
+}
+
+#link-list {
+    height: 200px;
+    padding: 0;
+    /* border-bottom: 1px solid black; */
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    overflow-y: scroll;
+}
+
+#link-list li {
+    /* border-top: 1px solid black; */
+    list-style-type: none;
+}
+
+.nav-link {
+    display: block;
+    height: 100%;
+    padding: 15px 0px 15px 0px;;
+}
+
 
 #main-doc {
     grid-area: main-doc;
     overflow-y: auto;
-    background-color: darkgray;
+    background-color: var(--bg-color);
 }
 
-@media (min-width:600px) {
+#header-text {
+    font-size: 1.7em;
+    font-weight: 300;
+}
+
+@media (min-width:800px) {
     #page-wrapper {
         height: 100vh;
         grid-template-columns: 300px auto;
