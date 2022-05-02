@@ -1,12 +1,12 @@
 body {
-    width: 100%;
+    width: 100vw;
     margin: 0px;
 }
 
 #page-wrapper {
     display: grid;
-    grid-template-columns: auto;
     grid-template-rows: 200px 1fr;
+    grid-template-columns: auto;
     grid-template-areas: 
     "navbar"
     "main-doc";
@@ -26,18 +26,20 @@ body {
 
 @media (min-width:600px) {
     #page-wrapper {
+        height: 100vh;
         grid-template-columns: 300px auto;
-        grid-template-rows: auto;
+        grid-template-rows: 1fr;
         grid-template-areas: 
         "navbar main-doc";
     }
-
-    /* Fix separate scroll */
-    #main-doc {
+    
+    #navbar {
         overflow-y: scroll;
     }
 
-    #navbar {
-        overflow-y: scroll;
+    
+    /* Fix separate scroll */
+    #main-doc {
+
     }
 } 
