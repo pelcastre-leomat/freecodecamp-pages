@@ -1,0 +1,43 @@
+body {
+    width: 100%;
+    margin: 0px;
+}
+
+#page-wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas: 
+    "navbar"
+    "main-doc";
+}
+
+#navbar {
+    grid-area: navbar;
+    overflow-y: auto;
+    background-color: grey;
+}
+
+#main-doc {
+    grid-area: main-doc;
+    overflow-y: auto;
+    background-color: darkgray;
+}
+
+@media (min-width:600px) {
+    #page-wrapper {
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "navbar main-doc";
+    }
+
+    /* Fix separate scroll */
+    #main-doc {
+        overflow-y: scroll;
+    }
+
+    #navbar {
+        overflow-y: scroll;
+    }
+} 
