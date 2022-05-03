@@ -1,6 +1,7 @@
 :root {
     --bg-color: white;
     --bg-color-navbar: white;
+    --text-color: rgb(77, 77, 77);
 }
 
 * {
@@ -28,65 +29,103 @@ body {
 }
 
 #navbar-header {
-    padding-top: 10px;
-    font-size: 1.7em;
+    padding: 15px 0px 15px 0px;
+    font-size: 2em;
     text-align: center;
 }
 
-#navbar a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.05em;
-}
-
+/* Check so scrollbar doesnt go out of screen in mobile */
 #link-list {
+    margin-top: 0px;
     height: 200px;
     padding: 0;
-    /* border-bottom: 1px solid black; */
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     overflow-y: scroll;
 }
 
 #link-list li {
-    /* border-top: 1px solid black; */
     list-style-type: none;
+    padding-left: 20px;
 }
 
 .nav-link {
     display: block;
     height: 100%;
-    padding: 15px 0px 15px 0px;;
+    color: var(--text-color);
+    padding: 15px 0px 15px 0px;
+    text-decoration: none;
+    font-size: 1.06em;
 }
+
 
 
 #main-doc {
     grid-area: main-doc;
     overflow-y: auto;
     background-color: var(--bg-color);
+    padding: 40px 40px 0px 20px;
+    line-height: 25px;
+}
+
+.main-section {
+    margin-bottom: 20px;
 }
 
 #header-text {
     font-size: 1.7em;
     font-weight: 300;
+    height: 30px;
 }
+
+.content {
+    color: var(--text-color);
+    padding-left: 20px;
+    font-size: 1.06em;
+    margin: 0px 10px 0px 10px;
+}
+
+.content a {
+    color: var(--text-color);
+}
+
+.content code {
+    padding: 20px 0px 20px 20px;
+    margin-left: 20px;
+    font-family: monospace;
+    background-color: rgb(242, 242, 242);
+    display: block;
+}
+
+.content li {
+    padding-bottom: 10px;
+}
+
+.content img {
+    width: 100%;
+}
+
+.content .special-text {
+    font-family: monospace;
+    background-color: rgb(149, 149, 149);
+    border-radius: 2px;
+    padding: 3px;
+}
+
+
 
 @media (min-width:800px) {
     #page-wrapper {
         height: 100vh;
         grid-template-columns: 300px auto;
-        grid-template-rows: 1fr;
+        grid-template-rows: 100vh;
         grid-template-areas: 
         "navbar main-doc";
     }
-    
-    #navbar {
-        overflow-y: scroll;
+
+    #navbar ul{
+        height: 100%;
     }
 
-    
-    /* Fix separate scroll */
-    #main-doc {
-
-    }
+    /* Main-doc with border on left as separator */
 } 
