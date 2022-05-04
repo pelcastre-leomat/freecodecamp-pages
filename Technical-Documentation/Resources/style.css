@@ -127,5 +127,9 @@ body {
         height: 100%;
     }
 
+    .content img {
+        max-width: 500px;
+    }
+
     /* Main-doc with border on left as separator */
 } 
