@@ -13,8 +13,9 @@
             <header id="navbar-header">Topic</header>
             <ul id="link-list">
                 <!-- clickable link should span all row -->
+                <!-- Write script to add sections to menu -->
                 <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#Introduction" class="nav-link">Nesting</a></li>
                 <li><a href="#Introduction" class="nav-link">Introduction</a></li>
                 <li><a href="#Introduction" class="nav-link">Introduction</a></li>
                 <li><a href="#Introduction" class="nav-link">Introductions</a></li>
@@ -109,6 +110,31 @@
                             The attribute value wrapped by opening and closing quotation marks.
                         </li>
                     </ol>
+                </article>
+            </section>
+            <section class="main-section" id="Nesting_elements">
+                <header id="header-text">
+                    Nesting elements
+                </header>
+                <article class="content">
+                    <p>You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat is very grumpy, 
+                        we could wrap the word "very" in a <span class="special-text">&lt;strong&gt;</span> element, which means that the word is to be strongly emphasized:
+                    </p>
+                    <code>
+                        &lt;p&gt;My cat is &lt;strong&gt;very&lt;&sol;strong&gt; grumpy.&lt;&sol;p&gt;
+                    </code>
+                        <p>
+                            You do however need to make sure that your elements are properly nested. In the example above, we opened the <span class="special-text">&lt;p&gt;</span> 
+                            element first, then the <span class="special-text">&lt;strong&gt;</span> element; therefore, we have to close the <span class="special-text">&lt;strong&gt;</span> element first, then the 
+                            <span class="special-text">&lt;p&gt;</span> element. The following is incorrect:</p>
+                        </p>
+                        <code>
+                            &lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;&sol;p&gt;&lt;&sol;strong&gt;
+                        </code>
+                        <p>
+                            The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap as shown above, then your web browser will try to make the best 
+                            guess at what you were trying to say, which can lead to unexpected results. So don't do it!
+                        </p>
                 </article>
             </section>
         </main>
