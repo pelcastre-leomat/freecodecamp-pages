@@ -12,26 +12,12 @@
         <nav id="navbar">
             <header id="navbar-header">Topic</header>
             <ul id="link-list">
-                <!-- clickable link should span all row -->
-                <!-- Write script to add sections to menu -->
-                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-                <li><a href="#Introduction" class="nav-link">Nesting</a></li>
-                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-                <li><a href="#Introduction" class="nav-link">Introductions</a></li>
-                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
-                <li><a href="#Introduction" class="nav-link">Introductions</a></li>
             </ul>
         </nav>
         <main id="main-doc">
             <section class="main-section" id="Introduction">
                 <!-- Change to class from id -->
-                <header id="header-text">
-                    Introduction
-                </header>
+                <header class="header-text">Introduction</header>
                 <!-- 10 over all main-sections -->
                 <article class="content">
                     <p>
@@ -48,8 +34,8 @@
                     </p>
                 </article>
             </section>
-            <section class="main-section" id="So_what_is_HTML">
-                <header id="header-text">So what is HTML?</header>
+            <section class="main-section" id="So_what_is_HTML?">
+                <header class="header-text">So what is HTML?</header>
                 <article class="content">
                     <p>HTML is a markup language that defines the structure of your content. HTML consists of a series of elements, which you use 
                         to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing tags 
@@ -65,9 +51,7 @@
             </section>
 
             <section class="main-section" id="Anatomy_of_an_HTML_element">
-                <header id="header-text">
-                    Anatomy of an HTML element
-                </header>
+                <header class="header-text">Anatomy of an HTML element</header>
                 <!-- 10 over all main-sections -->
                 <article class="content">
                     <p>Let's explore this paragraph element a bit further.</p>
@@ -113,9 +97,7 @@
                 </article>
             </section>
             <section class="main-section" id="Nesting_elements">
-                <header id="header-text">
-                    Nesting elements
-                </header>
+                <header class="header-text">Nesting elements</header>
                 <article class="content">
                     <p>You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat is very grumpy, 
                         we could wrap the word "very" in a <span class="special-text">&lt;strong&gt;</span> element, which means that the word is to be strongly emphasized:
@@ -141,7 +123,20 @@
     </div>
 
     <script>
-        var link_list = document.getElementById("link-list").getElementsByTagName("li");
+        var section_arr = document.getElementsByClassName("main-section");
+        var header_names = document.getElementsByClassName("header-text")
+        var navbar_list = document.getElementById("link-list")
+        for (let i = 0; i < section_arr.length; i++) {
+            var newEntry = document.createElement("li");
+            var entryLink = document.createElement("a");
+            entryLink.className = "nav-link";
+            entryLink.innerHTML = header_names[i].innerHTML;
+            entryLink.href= "#" + section_arr[i].id;
+            newEntry.append(entryLink);
+            navbar_list.appendChild(newEntry);          
+        }
+
+        var link_list = navbar_list.getElementsByTagName("li");
         for (let i = 0; i < link_list.length-1; i++) {
             link_list[i].style.borderBottom = "1px solid black";
         }

@@ -6,6 +6,7 @@
 
 * {
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -72,7 +73,7 @@ body {
     margin-bottom: 20px;
 }
 
-#header-text {
+.header-text {
     font-size: 1.7em;
     font-weight: 300;
     height: 30px;
