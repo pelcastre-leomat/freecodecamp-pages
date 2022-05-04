@@ -70,6 +70,7 @@ body {
 }
 
 .main-section {
+    scroll-margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -86,7 +87,7 @@ body {
     margin: 0px 10px 0px 10px;
 }
 
-.content a {
+a {
     color: var(--text-color);
 }
 
@@ -126,6 +127,16 @@ body {
 
     #navbar ul{
         height: 100%;
+    }
+
+    #link-list::-webkit-scrollbar {
+        display: none;
+      }
+    
+
+    #main-doc {
+        
+    border-left: 2px solid rgb(103, 103, 103);
     }
 
     .content img {
